@@ -92,7 +92,7 @@
 	margin-top: 6px;
 	float: right;
 }
-/*登陆按钮*/
+/*登录按钮*/
 #login_btn {
 	float: left;
 	width: 100px;
@@ -115,21 +115,21 @@
 	margin-top: 15px;
 	float: right;
 }
-/*QQ登陆样式*/
+/*QQ登录样式*/
 #login_QQ {
 	width: 150px;
 	height: 40px;
 	float: left;
 	border-radius: 0;
 }
-/*微博登陆样式*/
+/*微博登录样式*/
 #login_WB {
 	width: 150px;
 	height: 40px;
 	float: right;
 	border-radius: 0;
 }
-/*登陆表单容器*/
+/*登录表单容器*/
 #form_container1 {
 	width: 330px;
 	height: 240px;

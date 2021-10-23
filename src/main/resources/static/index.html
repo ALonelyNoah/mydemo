@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-
+		<title>springboot登录</title>
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/login.css" />
 		<script src="js/jquery.min.js"></script>
@@ -76,7 +76,7 @@
 
 	<body style="background-color: #000000;">
 
-		<a id="Login_start_" class="btn btn-danger" style="width:100px;height:40px;border-radius: 0;">登陆</a>
+		<a id="Login_start_" class="btn btn-danger" style="width:100px;height:40px;border-radius: 0;">登录</a>
 		<a id="Regist_start_" class="btn btn-success" style="width:100px;height:40px;border-radius: 0;">注册</a>
 
 		<!-- 会员登录  -->
@@ -96,9 +96,9 @@
 					</span>
 				</div>
 				<div style="width:330px;">
-					<span id="lab_type1">手机号/账号登陆</span>
+					<span id="lab_type1">手机/账号登录</span>
 				</div>
-					<form action="" th:action="@{~/user/login.action}">
+					<form action="/login.action"  method="post">
 						<div id="form_container1">
 							<br />
 							<input type="text" class="form-control" placeholder="手机号/用户名" id="login_number" value="admin" name="username" />
@@ -117,8 +117,8 @@
 							</span>
 						</div>
 					</form>
-				<div style="display:block;width:330px;height：40px;">
-					<span id="lab_type2">使用第三方直接登陆</span>
+				<div style="display:block;width:330px;height:40px;">
+					<span id="lab_type2">使用第三方直接登录</span>
 				</div>
 				<div style="width:330px;height:100px;border-bottom: 1px solid #FFFFFF;">
 					<br />
@@ -131,7 +131,7 @@
 				</div>
 			</div>
 			<!-- 会员注册 -->
-			<form action="" th:action="@{~/user/register.action}" method="post">
+			<form action="/register.action" method="post">
 				<div id='regist_container' style="display: none;">
 					<div id="lab1">
 						<span id="lab_login">会员注册</span>
