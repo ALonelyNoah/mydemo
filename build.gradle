@@ -7,10 +7,13 @@ plugins {
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 repositories {
     maven { url 'https://maven.aliyun.com/repository/public' }
     mavenCentral()
+    jcenter()
+    mavenLocal()
 }
 
 dependencies {
@@ -22,8 +25,15 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'mysql:mysql-connector-java'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 }
 
 test {
     useJUnitPlatform()
+}
+
+task makeReleaseJar(type: Jar, dependsOn: ['assembleRelease']){
+    archiveName = 'TestSdk.jar'
+    from ('build/intermediates/classes/release')
+    destinationDir = file('build/libs')
 }
