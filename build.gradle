@@ -1,22 +1,13 @@
-buildscript {
-    dependencies {
-        classpath("se.transmode.gradle:gradle-docker:1.2")
-    }
-}
-
 plugins {
     id 'org.springframework.boot' version '2.5.5'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
-    id 'application'
 }
 
-apply plugin:'docker'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+
 
 repositories {
     maven { url 'https://maven.aliyun.com/repository/public' }
@@ -40,9 +31,4 @@ test {
     useJUnitPlatform()
 }
 
-task makeReleaseJar(type: Jar, dependsOn: ['assembleRelease']){
-    archiveFileName = 'demo.jar'
-    delete 'build/libs/*.jar'
-    from ('build/intermediates/classes/release')
-    destinationDirectory = file('build/libs')
-}
+
