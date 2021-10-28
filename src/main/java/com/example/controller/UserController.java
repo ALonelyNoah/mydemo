@@ -36,8 +36,14 @@ public class UserController {
 		if(loginUser==null){
 			return new ModelAndView("redirect:/index.action");
 		}else{
-			return new ModelAndView("welcome.html");
+			return new ModelAndView("redirect:/welcome");
 		}
 		
+	}
+
+	//主页
+	@RequestMapping("/welcome")
+	public ModelAndView welcome(){
+		return new ModelAndView("welcome.html");
 	}
 }

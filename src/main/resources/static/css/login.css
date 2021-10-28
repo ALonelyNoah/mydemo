@@ -32,14 +32,14 @@
 	margin-top: 30px;
 }
 
-#lab1 {
+#lab1,#lab2{
 	width: 330px;
 	border-bottom: 1px solid #000000;
 	text-align: left;
 	font-family: '微软雅黑';
 }
 
-#lab_login {
+#lab_login,#lab_regist{
 	font-size: 30px;
 	height: 40px;
 	color: #000000;
